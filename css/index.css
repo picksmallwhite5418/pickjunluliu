@@ -4,7 +4,8 @@ li {list-style: none}
 b {font-weight: normal}
 em {font-style: normal}
 body,html{width: 100%;height: 100%;}
-.swiper-container{position: relative;width: 1519px;height: 762px;}
+.container-md{width: 1040px;padding:0 20px;margin:auto;box-sizing: border-box}
+.swiper-container{position: relative;width: 100%;height:100%;}
 .swiper-container{position: relative;}
 .swiper-slide{width: 100%;height: 100%;background-repeat: no-repeat;background-position: center; background-size: cover;}
 .swiper-slide-01{background-image:url("https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-1.jpg");}
@@ -16,31 +17,37 @@ body,html{width: 100%;height: 100%;}
 .swiper-slide-06{background-image:url("https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-6.jpg");}
 .swiper-slide-07{background-image:url("https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-7.jpg");}
 .swiper-slide-08{background-image:url("https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-8.jpg");}
-.header{width: 1080px;height: 49px;position: absolute;z-index: 10;top: 0;left:50%; margin-left: -540px; padding: 15px 0;}
+.header{width: 1080px;height: 49px;position: absolute;z-index: 10;top: 0;left:50%; margin-left: -540px; padding: 15px 0;box-sizing: border-box}
 .header>a>svg{ margin: 8px 20px}
-
 .header ul{float: right;color: #000;line-height: 49px;}
 .header>ul>li{display: inline-block;cursor: pointer;}
 .header>ul>li a{color: #fff; font-size: 16px; padding:8px 20px;}
+
 .header>ul>li .head-cp{
     display: none;
     width: 240px;
-    height: 204px;
     background-color: white;
+    line-height: normal;
     position: absolute;
-    top:35px ;
-    right:-240px ;
+    border-radius: 4px;
 }
-.header>ul>li>.cps:hover .head-cp{display: block;}
+.head-cp:before{width: 0;border-width:10px;border-style:solid;border-color:transparent transparent white transparent ;position: absolute;z-index: 11 ;content:"";
+    top:-19px;left: 27px;}
+.header>ul>li:hover ol{display: block; }
+.header>ul>li .head-cp>li>a {color: #000000;
+    display:inline-block; padding: 15px 20px 8px 20px ;
+    line-height: 28px;
+}
+.head-cp>li>a h3{font-size: 20px; font-weight: 400}
+.head-cp>li>a h3:hover{ color: #ff6600}
+.header>ul>li .head-cp li p{display:block;font-size: 14px;line-height: 20px;
+    /*color: #f2f2f2;*/
+}
 
-.header>ul>li.head-cp li{ display:inline-block;float: left;
-    width: 200px;
-    height: 48px;padding: 15px 20px 1px 20px ;}
-.header>ul>li .head-cp>li>a {
-    color: #000000;font-size: 20px;}
-.header>ul>li .head-cp li span{display:block;font-size: 14px;color: #f2f2f2;}
 
-.warp{width: 1040px;height: 146px;position:absolute;top: 50%;left: 50%;z-index: 10;margin-left: -520px;margin-top: -73px;}
+
+
+.warp{width: 1040px;height: 146px;position:absolute;top: 50%;left: 50%;z-index: 10;margin-left: -520px;margin-top: -73px;box-sizing: border-box}
 .warp .warp-logo{font-size: 67.2px;font-weight: bold;line-height: 1;margin-bottom:20px ;font-family: Overpass, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', Arial, Verdana, sans-serif;
 ;
 }
@@ -67,81 +74,103 @@ body,html{width: 100%;height: 100%;}
 }
 
 .nav{
-     box-sizing: border-box; margin-left: -3px;margin-top:2px;}
+     box-sizing: border-box; margin-left: -3px;margin-top:2px; height:260px;}
 
 .nav>a{
     float: left;  width: 25%;
-    height:260px;
     padding: 37px;
+    height: 100%;
     text-align: center;;
     border-left: 2px solid #fff;
     box-sizing: border-box;
     background: no-repeat center ;
-    background-size: 378px 260px;
+    background-size: cover;
     position: relative;
     /*border-top-width: 2px;*/
     /*border-bottom: none;*/
 
 }
-.nav>a h3{font-size: 24px;
-    font-weight: 400;
-    color: white;
-    margin-top: 5px;
-    text-align: center;
+.nav>a h3{font-size: 24px;font-weight: 400;color: white;
+    margin-top: 5px;text-align: center;
 }
-body .main{
-    width: 100%;height: 50px;padding: 45px 0;
-    border-bottom: 1px solid #eee;
-}
-.main ul{
-    width: 1040px;
-    margin: 0 auto;}
-.main ul li{display: inline-block;
-    float: left;
-    width: 33.3%;
-    height: 50px;}
-.main ul li img{
-    width: 50px;
-    height: 50px;margin-right: 10px}
-.main ul li div{ display: inline-block;}
-.footer{width: 100%;height: 157px;
-    border-bottom: 1px solid #eee; position: relative;
+
+.meta-link .txt h2{font-weight: 400; }
+.meta-link .txt p{font-weight: 300}
+.meta-link{width: 33.33%;float:left;padding:45px 0;font-size: 0;box-sizing: border-box}
+.meta-link .icon{width:50px;height: 50px;margin-right:10px;display:inline-block;vertical-align:middle;background-repeat: no-repeat;background-position:center center;background-size: contain}
+.meta-link .txt{display: inline-block;vertical-align:middle;font-size:16px;text-align: left}
+.meta-link:nth-child(2){text-align: center}
+.meta-link:nth-child(3){text-align: right}
+
+
+.footer{ border-top: 1px solid #eee;box-sizing: border-box;
+    width: 100%;
+     position: relative;
     font-weight: 300;
-    max-width: 1080px;
-    margin: 0 auto;
     padding: 45px 20px;
     font-size: 16px;
     color: #000;
 }
-.main-links{margin-right: 40px;
-    width: 398px;float: left;}
+.main-links{width: 33%;float: left;}
 .main-links li .font-logo img{
     display: inline-block;
     width: 160px;
-    height: 36px;margin-bottom: 10px;}
+    height: 37px;margin-bottom: 10px;}
 .main-links li{
     display: inline-block;
-    width: 398px;
+ width: 100%;
     height: 36px;}
 .main-links li a{ font-weight: 300;color: #000;}
-.footer .right{float: left;
-    width: 601px;
-    height: 157px;}
-.footer .right dl{ float: left;
-    width: 25%;}
-.footer .right dt{font-weight: bold;
-    margin-bottom: 10px;font-size: 17.55px;
-}
-.footer .right dd{font-size: 15px;line-height: 30px;}
-.footer-miscs {
-    border-top: 1px solid #eee;
-}
-.container-md {position: relative;max-width: 1080px;margin: 0 auto;padding: 0 20px;
-}
-.footer-miscs .footer{display: flex;padding-top: 45px;padding-bottom: 45px;}
-.footer-miscs .icp{font-size:12px;margin-top:4px;color: #aaa;}
+.footer .right{float:right;width: 66%;}
+.footer .right dl{ float:left;line-height: 30px;font-size: 15px;padding-left:123px;box-sizing: border-box}
+.footer .right dl:nth-child(1){padding: 0}
+.right dl dt{margin-bottom: 10px;font-weight: bold;font-size: 18px;}
 
-.footer-badges{float: right;}
+/*.footer .right dt{font-weight: bold;*/
+    /*margin-bottom: 10px;font-size: 17.55px;}*/
+/*.footer .right dl:nth-child(1){margin: 0}*/
+/*.footer{padding:45px 0;border-top:1px solid red}*/
+/*.footer-logo{float: left}*/
+/*.footer-logo .logo img{width:160px;height: 37px;}*/
+/*.footer-logo p{line-height: 36.8px;}*/
+/*.footer-logo p a{color:#000}*/
+/*.footer-list{float: right}*/
+/*.footer-list dl{float: left;margin-left:123px;line-height: 30px;font-size: 15px;}*/
+/*.footer-list dl dt{margin-bottom: 10px;font-weight: bold;font-size: 18px;}*/
+
+/*.footer-miscs {border-top: 1px solid #eee;}*/
+/*.container-md {position: relative;max-width: 1080px;margin: 0 auto;padding: 0 20px;}*/
+/*.footer-miscs .footer{display: flex;padding: 45px 0;}*/
+/*.footer-miscs .icp{font-size:12px;margin-top:4px;color: #aaa;}*/
+
+/*.footer-miscs .footer-right{float: right;}*/
+.copyRight{padding:45px 0;border-top:1px solid #eee}
+.copy-left{float: left}
+.copy-left p{font-size: 12px;color:#aaa;line-height: 2.3}
+.copy-left p i{display:inline-block;vertical-align:middle;width:15px;height: 15px;background: url("https://mobike.com/cn/assets/themes/moby/img/beian-icon.png") no-repeat;background-size: cover}
+.copy-right{float: right}
+.copyRight img{margin: 0 10px;}
+
+@media screen and (max-width: 1080px) {
+   .nav>a{width: 50%}
+    .container-md{width: 100%;box-sizing: border-box;}
+    .head-cd{display: none}
+    .footer .right dl{ padding-left: 51px}
+}
+@media screen and (max-width: 640px) {
+    .nav>a{width: 100%;}
+    .container-md{width: 100%;box-sizing: border-box}
+    .meta-link{width: 100%; padding: 22px 0;}
+    .head-cd{display: none}
+    .meta-link:nth-child(2){text-align:left;}
+    .meta-link:nth-child(3){text-align:left;}
+    .main-links {width: 100%}
+    .footer .right{float: none;width: 100%; }
+    .footer .right dl{width: 50%;padding: 0;height: 150px}
+    .copy-left span{display: block;}
+   .copy-right{float: left}
+}
+
 
 
 
